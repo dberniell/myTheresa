@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <hr>
+    <link href="{{ asset('assets/css/home.css') }}" rel="stylesheet"/>
+
+    <div id="addItemCart">
+        <h3>Add item to cart</h3>
+        {{ form(formAddItem) }}
+    </div>
+
+    <div id="getItemsCart">
+        <h3>Select cart to get items</h3>
+        <select id="cartDropdown">
+            {%  for cart in carts %}
+                <option value="{{ cart.id }}">{{ cart.id }}</option>
+            {% endfor %}
+        </select>
+        {% if carts|length > 0 %}
+            <a id="getItems" href="{{ path('get_cart_items', {'cart': ' '}) }}">Get items from cart</a>
+
+
+        {% endif %}
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('assets/js/home.js') }}" type="text/javascript"></script>
+    {% endblock %}
+{% endblock %}

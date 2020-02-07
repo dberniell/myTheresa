@@ -1,0 +1,14 @@
+div, input, select {
+  margin: 5px;
+}
+
+#addItemCart {
+  margin: 10px;
+  float: left;
+}
+
+
+#getItemsCart {
+  margin: 20px;
+  float: right;
+}

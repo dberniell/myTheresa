@@ -1,0 +1,6 @@
+parameters:
+  env(DATABASE_HOST): 'mysql'
+  env(DATABASE_PORT): '3306'
+  env(DATABASE_NAME): 'my_theresa_test'
+  env(DATABASE_USER): 'root'
+  env(DATABASE_PASS): 'api'
